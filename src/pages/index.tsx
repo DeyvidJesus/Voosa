@@ -73,7 +73,7 @@ export default function Login() {
       {currentScreen === 0 && (
         <Flex
           w="100vw"
-          h="90vh"
+          h={["100vh", "100vh", "80vh", "90vh"]}
           align="center"
           justify="space-evenly"
         >
@@ -81,17 +81,17 @@ export default function Login() {
             flexDir={"column"}
             align={"center"}
             justify={"space-between"}
-            height={"60vh"}
-            maxWidth="850px"
+            height={["75vh" ,"60vh"]}
+            maxWidth={["350px","850px"]}
           >
             <Heading
-              fontSize={"3xl"}
+              fontSize={["xl" ,"3xl"]}
               textAlign={"center"}
             >Seja bem-vindo ao <Highlight query={"Voosa"} styles={{ color: "cyan.400" }}>Voosa</Highlight>
             </Heading>
 
             <Text
-              fontSize={"18px"}
+              fontSize={["16px" ,"18px"]}
               textAlign={"center"}
               margin={"4"}
             >Crie sua conta já e aproveite os benefícios!!
@@ -101,9 +101,9 @@ export default function Login() {
             <Flex
               as="form"
               width="100%"
-              maxWidth="400px"
+              maxWidth={["300px","400px"]}
               bg="gray.650"
-              p="8"
+              p={["5", "8"]}
               borderRadius={8}
               flexDir="column"
               onSubmit={handleSubmit(handleSignIn)}
@@ -138,7 +138,7 @@ export default function Login() {
 
               <Button
                 as={"button"}
-                size="lg"
+                size={["md", "lg"]}
                 type='submit'
                 mt={6}
                 colorScheme={'cyan'}
@@ -150,7 +150,8 @@ export default function Login() {
               </Button>
               <Link
                 pt={"2"}
-                color={"gray.300"}
+                fontSize={["sm","md"]}
+                color={"gray.200"}
                 onClick={() => {
                   setCurrentScreen(1);
                   setEmail("");
@@ -161,32 +162,32 @@ export default function Login() {
               </Link>
             </Flex>
           </Flex>
-          <Image src="notelist.svg" alt="Imagem de notas" width={450} marginTop={"24"} />
+          <Image display={["none", "none", "none", "block"]} src="notelist.svg" alt="Imagem de notas" width={450} marginTop={"24"} />
         </Flex>
       )}
 
       {currentScreen === 1 && (
         <Flex
-          w="100vw"
-          h="90vh"
-          align="center"
-          justify="space-evenly"
+        w="100vw"
+        h={["100vh", "100vh", "80vh", "90vh"]}
+        align="center"
+        justify="space-evenly"
         >
           <Flex
             flexDir={"column"}
             align={"center"}
             justify={"space-between"}
-            height={"60vh"}
-            maxWidth="850px"
+            height={["75vh" ,"60vh"]}
+            maxWidth={["350px","850px"]}
           >
             <Heading
-              fontSize={"3xl"}
+              fontSize={["xl" ,"3xl"]}
               textAlign={"center"}
             >Bem-vindo de volta ao <Highlight query={"Voosa"} styles={{ color: "cyan.400" }}>Voosa!</Highlight>
             </Heading>
 
             <Text
-              fontSize={"18px"}
+              fontSize={["16px" ,"18px"]}
               textAlign={"center"}
               margin={"4"}
             >Seu bloco de notas te aguarda!
@@ -195,9 +196,9 @@ export default function Login() {
             <Flex
               as="form"
               width="100%"
-              maxWidth="400px"
+              maxWidth={["300px","400px"]}
               bg="gray.650"
-              p="8"
+              p={["5", "8"]}
               borderRadius={8}
               flexDir="column"
               onSubmit={handleSubmit(handleLogin)}
@@ -232,7 +233,7 @@ export default function Login() {
 
               <Button
                 as={"button"}
-                size="lg"
+                size={["md", "lg"]}
                 type='submit'
                 mt={6}
                 colorScheme={'cyan'}
@@ -245,6 +246,7 @@ export default function Login() {
 
               <Link
                 pt={"2"}
+                fontSize={["sm","md"]}
                 color={"gray.200"}
                 onClick={() => {
                   setCurrentScreen(0);
@@ -256,7 +258,7 @@ export default function Login() {
               </Link>
             </Flex>
           </Flex>
-          <Image src="notelist.svg" alt="Imagem de notas" width={450} marginTop={"24"} />
+          <Image display={["none", "none", "none", "block"]} src="notelist.svg" alt="Imagem de notas" width={450} marginTop={"24"} />
         </Flex>
       )}
 

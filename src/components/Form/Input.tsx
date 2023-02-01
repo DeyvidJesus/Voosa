@@ -24,7 +24,7 @@ const InputComponent: ForwardRefRenderFunction<
                 colorScheme={"gray"}
                 variant="filled"
                 _hover={{ bgColor: 'gray.600' }}
-                size="lg"
+                size={["md", "lg"]}
                 {...rest}
                 ref={ref}
             />
